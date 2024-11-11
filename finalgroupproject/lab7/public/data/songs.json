@@ -1,0 +1,21 @@
+[
+        { "title": "Imagine", "artist": "John Lennon" },
+        { "title": "Bohemian Rhapsody", "artist": "Freddie Mercury (Queen)" },
+        { "title": "Like a Rolling Stone", "artist": "Bob Dylan" },
+        { "title": "Billie Jean", "artist": "Michael Jackson" },
+        { "title": "Hotel California", "artist": "Don Henley, Glenn Frey, Don Felder (The Eagles)" },
+        { "title": "Smells Like Teen Spirit", "artist": "Kurt Cobain, Dave Grohl, Krist Novoselic (Nirvana)" },
+        { "title": "Hey Jude", "artist": "Paul McCartney and John Lennon (The Beatles)" },
+        { "title": "I Will Always Love You", "artist": "Dolly Parton (Whitney Houston)" },
+        { "title": "What’s Going On", "artist": "Marvin Gaye, Renaldo Benson, Al Cleveland" },
+        { "title": "Rolling in the Deep", "artist": "Adele and Paul Epworth" },
+        { "title": "Stairway to Heaven", "artist": "Jimmy Page and Robert Plant (Led Zeppelin)" },
+        { "title": "Born to Run", "artist": "Bruce Springsteen" },
+        { "title": "Superstition", "artist": "Stevie Wonder" },
+        { "title": "Hallelujah", "artist": "Leonard Cohen (Jeff Buckley)" },
+        { "title": "Uptown Funk", "artist": "Mark Ronson, Bruno Mars, Jeff Bhasker" },
+        { "title": "Sweet Child O' Mine", "artist": "Axl Rose, Slash, Duff McKagan (Guns N' Roses)" },
+        { "title": "Shape of You", "artist": "Ed Sheeran, Johnny McDaid, Steve Mac" },
+        { "title": "Yesterday", "artist": "Paul McCartney (The Beatles)" },
+        { "title": "Someone Like You", "artist": "Adele and Dan Wilson" }
+]

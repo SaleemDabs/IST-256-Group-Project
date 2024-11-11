@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Music to Your Music List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 class="h-text">Add Music:</h1>
+    <form id="musicForm">
+        <div>
+            <label for="song">Song Name:</label>
+            <input type="text" id="song" name="song" required>
+        </div>
+        <div>
+            <label for="artist">Artist Name:</label>
+            <input type="text" id="artist" name="artist" required>
+        </div>
+        <div>
+            <label for="genre">Genre Type:</label>
+            <input type="text" id="genre" name="genre" required>
+        </div>
+        <button type="submit">Add to library</button>
+    </form>
+    <div id="confirmation" style="display: none;">Your song has been added to the library!</div>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#musicForm').on('submit', function(event) {
+                event.preventDefault();
+
+
+                const song = $('#song').val();
+                const artist = $('#artist').val();
+                const genre = $('#genre').val();
+
+
+                $.ajax({
+                    url: '/add-music',
+                    type: 'POST',
+                    data: {
+                        song: song,
+                        artist: artist,
+                        genre: genre
+                    }
+                })
+                .done(function() {
+                    $('#confirmation').show();
+                    $('#musicForm')[0].reset();
+                })
+                .fail(function() {
+                    alert('Error, Please try again.');
+                })
+                .always(function() {
+                    console.log('Completed Requesty.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
