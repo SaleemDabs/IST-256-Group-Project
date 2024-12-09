@@ -5,69 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <style>
-        .h-text {
+        html, body {
+            background-color: beige; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 500;
+            margin: 0;
+            padding: 0;
+        }
+        .h-text {
+            font-weight: 600;
             color: brown;
+            font-size: 2.5rem;
         }
         #dropdownMenuButton1 {
-            margin-top: 0px;
-            margin-right: 0px;
-            position:absolute;
-            top: 0px;
-            right:0;
+            margin: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .dropdown-menu {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        p {
+            color: #5a3e2b;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .card-body > h2 {
+            color: brown;
+            font-weight: normal; /* Remove bold */
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .featured-artist {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .featured-artist img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .featured-artist-info {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .featured-artist-info h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #5a3e2b;
+        }
+        .featured-artist-info p {
+            margin: 5px 0 10px;
+            font-size: 1rem;
+            color: #6d6d6d;
+        }
+        .featured-artist-info ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+            color: #5a3e2b;
+        }
+        .featured-artist-info ul li {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        .step-guide {
+            text-align: left;
+            margin: 20px 0;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #5a3e2b;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .step-guide h3 {
+            color: brown;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
     </style>
     <link rel="icon" type="image/x-icon" href="./images/musicfavicon.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet" >
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body style="background-color: beige;">
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Menu
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
-      <li><a class="dropdown-item" href="./createuser.html">Create Account</a></li>
-      <li><a class="dropdown-item" href="./input.html">Music Page</a></li>
-      <li><a class="dropdown-item" href="./music.html">Music Collection</a></li>
-      <li><a class="dropdown-item" href="./MeetTheTeam.html">About Us</a></li>
-    </ul>
-  </div>
-
-
-  <div class="container mt-5">
-    <div class="card shadow">
-      <div class="card-body text-center">
-        <h1 class="h-text display-4">Your Music List</h1>
-      </div>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="./profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="./createuser.html">Create Account</a></li>
+            <li><a class="dropdown-item" href="./music.html">Music Collection</a></li>
+            <li><a class="dropdown-item" href="./MeetTheTeam.html">About Us</a></li>
+        </ul>
     </div>
-
-    <div class="card mt-3 shadow">
-      <div class="card-body">
-          <p class="lead">Welcome to Your Music List. We are a web application that allows you to log your music journey.
-            You can make a profile and add your favorite genres, artists, albums, songs, and concerts you have
-            been to like an online diary.</p>
-
-            <div class="card mt-3 shadow">
-              <div class="card-body">
-                <h2 class="mb-4" style="text-align: center;">Featured Artists and Albums</h2>
-                <div class="row">
-                  <div class="col-md-4">
-                    <img src="./images/Kendrick_Lamar_-_Damn.png" class="img-fluid rounded mb-3" alt="Kendrick Lamar - Damn">
-                  </div>
-                  <div class="col-md-4">
-                    <img src="./images/licensed-image.jpg" class="img-fluid rounded mb-3" alt="Licensed Album Image">
-                  </div>
-                  <div class="col-md-4">
-                    <img src="./images/what-happened-to-bad-bunny-why-isnt-he-dropping-a-proper-v0-t5k2qgocaycd1.webp" class="img-fluid rounded mb-3" alt="Bad Bunny">
-                  </div>
-                </div>
-              </div>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h1 class="h-text display-4">Your Music List</h1>
             </div>
-          </div>
-    <!-- To start Express app, "cd lab7" then "npm start"-->
+        </div>
+
+        <div class="card mt-3 shadow">
+            <div class="card-body">
+                <p class="lead">
+                    Welcome to Your Music List. We are a web application that allows you to log your music journey.
+                    You can make a profile and add your favorite genres, artists, albums, songs, and concerts you have
+                    been to like an online diary.
+                </p>
+                <div class="step-guide">
+                    <h3>Getting Started</h3>
+                    <ol>
+                        <li><strong>Create Account:</strong> Use the "Create Account" option in the dropdown menu to set up your profile.</li>
+                        <li><strong>Profile:</strong> Access your profile via the "Profile" option to view and manage your saved items.</li>
+                        <li><strong>Music Collection:</strong> Browse through the preset list of artists and albums. Choose your favorites and save them directly to your profile.</li>
+                        <li><strong>About Us:</strong> Learn more about the team behind "Your Music List" via the "About Us" option.</li>
+                    </ol>
+                </div>
+                <div class="card mt-3 shadow">
+                    <div class="card-body">
+                        <h2>Featured Artists and Albums</h2>
+
+                        <div class="featured-artist">
+                            <img src="./images/kendrick.jpg" alt="Kendrick Lamar">
+                            <div class="featured-artist-info">
+                                <h3>Kendrick Lamar</h3>
+                                <p>Genre: Hip-Hop</p>
+                                <ul>
+                                    <li>Good Kid, M.A.A.D City</li>
+                                    <li>To Pimp a Butterfly</li>
+                                    <li>DAMN.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="featured-artist">
+                            <img src="./images/ariana.jpg" alt="Ariana Grande">
+                            <div class="featured-artist-info">
+                                <h3>Ariana Grande</h3>
+                                <p>Genre: Pop</p>
+                                <ul>
+                                    <li>Thank U, Next</li>
+                                    <li>Sweeter</li>
+                                    <li>Positions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="featured-artist">
+                            <img src="./images/badbunny.jpg" alt="Bad Bunny">
+                            <div class="featured-artist-info">
+                                <h3>Bad Bunny</h3>
+                                <p>Genre: Reggaeton</p>
+                                <ul>
+                                    <li>YHLQMDLG</li>
+                                    <li>El Último Tour Del Mundo</li>
+                                    <li>Un Verano Sin Ti</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
